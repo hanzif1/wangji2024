@@ -20,51 +20,60 @@
 			</swiper-item>
 			<swiper-item>
 				<image aspectFill
-					src="https://mmbiz.qpic.cn/mmbiz_jpg/n25icv4iaMwciaz2xRtj16VYf22R6YM5VrhJztINns8Tw2V2t5xo2a9jusFZ4Wribu1GwyvwH8mjaVJc8NDZAG5ZAA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+					src="file:///D:/桌面/hxh/static/微信图片_20240903210443.jpg">
 				</image>
 			</swiper-item>
 			<swiper-item>
 				<image aspectFill
-					src="https://i1.hdslb.com/bfs/archive/e6c5f68a9ec5a7dc9d1dc0b13b4c312c412058b0.png@336w_190h_1c_!web-video-rcmd-cover.avif">
+					src="file:///D:/桌面/hxh/static/微信图片_20240906210340.jpg">
 				</image>
 			</swiper-item>
 		</swiper>
 	</view>
 
 	<view class="container">
-		<view class="section1"><view>军训要闻</view>
+		<view class="section">
+			<view class="a">军队党临时支部建设</view>
 			<view class="content" v-for="(item,index) in list" :key="index">
-				<view v-if="item.mode===0" class="titlebox">
-					{{item.title}}
-					{{item.time}}
-				</view>
+				<a v-if="item.mode===0" :href="item.url" class="titlebox">
+					<view>{{item.title}}
+						{{item.time}}
+					</view>
+				</a>
 			</view>
 		</view>
-		<view class="section2"><view>军训通知</view>
-			<view class="content" v-for="(item,index) in list" :key="index">
-				<view class="titlebox" v-if="item.mode===2">
-					{{item.title}}
-					{{item.time}}
-				</view>
+		<view class="section">
+			<view class="b">军训侧记</view>
+			<view class="content" v-for="(item, index) in list" :key="index">
+				<a v-if="item.mode === 2" :href="item.url" class="titlebox">
+					<view>{{ item.title }}
+						{{ item.time }}
+					</view>
+				</a>
 			</view>
 		</view>
-		<view class="section3">军训临时支部建设
+		<view class="section">
+			<view class="c">军训要闻</view>
 			<view class="content" v-for="(item,index) in list" :key="index">
-				<view class="titlebox" v-if="item.mode===1">
-					{{item.title}}
-					{{item.time}}
-				</view>
+				<a class="titlebox" v-if="item.mode===1" :href="item.url">
+					<view>{{item.title}}
+						{{item.time}}
+					</view>
+				</a>
 			</view>
 		</view>
-		<view class="section4">军训侧记
+		<view class="section">
+			<view class="d">军训通知</view>
 			<view class="content" v-for="(item,index) in list" :key="index">
-				<view class="titlebox" v-if="item.mode===3">
-					{{item.title}}
-					{{item.time}}
-				</view>
+				<a class="titlebox" v-if="item.mode===3" :href="item.url">
+					<view>{{item.title}}
+						{{item.time}}
+					</view>
+				</a>
 			</view>
 		</view>
 	</view>
+	<view class="navigation_bar">CopyRight 兰州大学萃英在线 2024</view>
 </template>
 
 <script>
@@ -230,6 +239,11 @@
 <style lang="scss">
 	.titlebox {
 		padding: 15px;
+		text-decoration: none;
+		color: black;
+		display: inline-block; // 使文本呈现块级属性
+		display: flex;
+		justify-content: space-between;
 	}
 
 	.bigbigbox {
@@ -246,15 +260,15 @@
 	.title {
 		display: flex;
 		justify-content: center;
-		background-color: lightblue;
 		font-size: 70rpx;
+		background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 	}
 
 	.title2 {
 		display: flex;
 		justify-content: space-around;
-		background-color: lightblue;
 		font-size: 40rpx;
+		background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 	}
 
 	nav view {
@@ -262,7 +276,6 @@
 		/* 移除列表前的默认符号 */
 		padding: 0;
 		margin: 0;
-		background: lightblue;
 		display: flex;
 		justify-content: space-around;
 	}
@@ -290,27 +303,35 @@
 	}
 
 	.container {
-		background-color: #ffffff;
+		background-color: #dfe0d3;
+		// background-color: #f0f0f0;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 20px;
 	}
 
-	.section1.section2.section3.section4 {
+	.section {
 		margin-bottom: 20px;
-		width: 45%;
-	}
-
-	h5 {
-		font-size: 18px;
-		color: #333;
-		margin-bottom: 10px;
+		.a,.b,.c,.d{font-size: 32px;}
 	}
 
 	.content {
+		// background-color: #ffffff;
 		background-color: #f0f0f0;
-		border-radius: 5px;
+		border-radius: 5px;//圆角效果
 		font-size: 30rpx;
 		margin-bottom: 10px;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	}
+	.navigation_bar{
+		display: inline-block;
+		display: flex;
+		justify-content: center;
+	}
+	@media (min-width: 768px) and (max-width: 991px) {
+	  .container {
+	    width: 750px;
+	  }
+	}
+
 </style>
