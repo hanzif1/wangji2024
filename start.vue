@@ -3,7 +3,7 @@
 		<!-- 背景视频 -->
 		<video
 		  class="background-video"
-		  src="/static/cyVideo.MOV"
+		  src="/static/cy2.MOV"
 		  autoplay="true"
 		  loop="true"
 		  muted="true"
@@ -62,27 +62,24 @@
 	
 	.content1 {
 		position: absolute;
-		top: 200rpx;
-		left:10%;
+		top: 60rpx;
+		left:45%;
 		text-align: center;
 		transform: translateX(20%);
 	  font-size: 40px;
 	  font-weight: bold;
-	  background: linear-gradient(45deg, #d7c1ae, #8f170f); /* 渐变文字效果 */
+	  background: linear-gradient(45deg, #9d2d08, #ff732b); /* 渐变文字效果 */
 	  -webkit-background-clip: text; /* 用背景裁剪文字，只显示渐变色部分 */
 	  color: transparent; /* 隐藏文字颜色，让渐变显示 */
-	  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加阴影效果 */
+	  
 	  letter-spacing: 2px; /* 增加字间距 */
 	  padding: 20px;
 	  text-transform: uppercase; /* 全部转为大写 */
 	  font-family: 'cursive'; /* 自定义字体 */
-	  transform: skew(-20deg);
+	  transform: skew(-10deg);
 	  z-index: 1;
-	  transition: color 0.3s ease; /* 添加平滑过渡效果 */
 	}
-	.content1:hover{
-		color: #20B2AA;
-	}
+	
 	@keyframes flash {
 	  0% {
 	    opacity: 1; /* 完全可见 */
@@ -102,26 +99,17 @@
 		  transform: translateX(-50%); /* 水平居中 */
 		  font-size: 13px;
 		  text-align: center;
-		color: #ffe7cf;
+		color: #f3feff;
 		font-family: 'cursive';
 		 animation: flash 1s infinite;
 	}
-	.copy{
-		position: absolute;
-		bottom:40rpx;
-		left: 50%;
-		transform: translateX(-50%);
-		color: white;
-		text-align: center;
-		font-size: 10px;
-	}
 	.logo {
 	position: absolute;
-	  top:16%; /* 控制顶部距离 */
-	  left:10%; /* 控制左边距离 */
+	  top:15%; /* 控制顶部距离 */
+	  left:40%; /* 控制左边距离 */
 	  z-index: -1;
-	  width: 10%;  /* 控制图片宽度 */
-		height: 5%;
+	  width: 40px;  /* 控制图片宽度 */
+		height: 40px;
 	}
 	
 </style>
