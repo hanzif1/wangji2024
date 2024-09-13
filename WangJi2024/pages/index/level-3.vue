@@ -72,7 +72,7 @@
 				if (this.imgindex === 4) {
 					setTimeout(() => {
 						this.showAlertAndRedirect()
-					}, 500);
+					}, 300);
 				}
 			},
 			checkAnswer() {
@@ -84,9 +84,18 @@
 					this.currentimage = this.images[this.imgindex];
 					this.the_text = this.texts[this.imgindex];
 					this.timu = this.text[(this.imgindex) % this.images.length];
+					uni.showToast({
+						title: 'QAQ',
+						duration: 2000,
+						
+					});
 				} 
 				else{
-					alert('哈哈蒙都蒙不对QAQ')
+					uni.showToast({
+						title: '二选一都错了？',
+						duration: 2000,
+						icon: 'error'
+					});
 				}
 				
 			},

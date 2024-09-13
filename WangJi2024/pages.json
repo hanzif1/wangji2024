@@ -26,9 +26,16 @@
 				"navigationStyle": "custom"
 			}
 		},{
-			"path": "pages/index/end",
+			"path": "pages/index/yes",
 			"style": {
 				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/index/end",
+			"style" : 
+			{
+				"navigationBarTitleText" : "custom"
 			}
 		}
 	],
