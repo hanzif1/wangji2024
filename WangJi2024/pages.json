@@ -21,6 +21,11 @@
 				"navigationStyle": "custom"
 			}
 		},{
+			"path": "pages/index/level-4",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},{
 			"path": "pages/index/end",
 			"style": {
 				"navigationStyle": "custom"

@@ -99,7 +99,7 @@
 							console.log('用户点击确定');
 							// 跳转到指定页面，替换'path/to/your/page'为实际页面路径
 							uni.navigateTo({
-								url: '/pages/index/end'
+								url: '/pages/index/level-4'
 							});
 						} else if (res.cancel) {
 							console.log('用户点击取消');
