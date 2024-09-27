@@ -19,13 +19,11 @@
 				<image src="https://img.micosliang.space/cyonline/junxun/articles/desk.jpg" aspectFill></image>
 			</swiper-item>
 			<swiper-item>
-				<image aspectFill
-					src="file:///D:/桌面/hxh/static/微信图片_20240903210443.jpg">
+				<image aspectFill src="file:///D:/桌面/hxh/static/微信图片_20240903210443.jpg">
 				</image>
 			</swiper-item>
 			<swiper-item>
-				<image aspectFill
-					src="file:///D:/桌面/hxh/static/微信图片_20240906210340.jpg">
+				<image aspectFill src="file:///D:/桌面/hxh/static/微信图片_20240906210340.jpg">
 				</image>
 			</swiper-item>
 		</swiper>
@@ -232,8 +230,21 @@
 		},
 		methods: {
 
+		},
+		mounted() {
+			uni.request({
+				url: "http://127.0.0.1:8000/",
+				data: {
+					b: 2,
+				},
+				method: 'GET',
+				success: (res) => {
+					console.log(res.data);
+				}
+			});
 		}
 	}
+
 </script>
 
 <style lang="scss">
@@ -312,26 +323,33 @@
 
 	.section {
 		margin-bottom: 20px;
-		.a,.b,.c,.d{font-size: 32px;}
+
+		.a,
+		.b,
+		.c,
+		.d {
+			font-size: 32px;
+		}
 	}
 
 	.content {
 		// background-color: #ffffff;
 		background-color: #f0f0f0;
-		border-radius: 5px;//圆角效果
+		border-radius: 5px; //圆角效果
 		font-size: 30rpx;
 		margin-bottom: 10px;
 		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	}
-	.navigation_bar{
+
+	.navigation_bar {
 		display: inline-block;
 		display: flex;
 		justify-content: center;
 	}
-	@media (min-width: 768px) and (max-width: 991px) {
-	  .container {
-	    width: 750px;
-	  }
-	}
 
+	@media (min-width: 768px) and (max-width: 991px) {
+		.container {
+			width: 750px;
+		}
+	}
 </style>
