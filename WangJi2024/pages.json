@@ -35,7 +35,7 @@
 			"path" : "pages/index/end",
 			"style" : 
 			{
-				"navigationBarTitleText" : "custom"
+				"navigationStyle" : "custom"
 			}
 		}
 	],
