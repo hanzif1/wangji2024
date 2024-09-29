@@ -1,7 +1,8 @@
 <template>
-	<view class="title">喜迎国庆</view>
 	
-	<view>
+	
+	<view class="all">
+		<view class="title">喜迎国庆</view>
 		<view class="word"><test>张灯结彩欢度国庆佳节</test><br><test>锦绣中国，盛世华诞，举国同庆</test><br><test>热烈庆祝中国人民共和国成立75周年</test></view>
 		<!-- 悬浮圆形按钮 -->
 		<view class="floating-button0" @click="toggleModal1()">
@@ -31,8 +32,8 @@
 				<view class="close-btn" @click="toggleModal()">✖</view>
 			</view>
 			<view class="example-body">
-				<uni-file-picker :mode="grid" :auto-upload="false" limit="1" title="最多选择1张图片"></uni-file-picker>
-				<button @click="uploadWeibo()">上传微博</button>
+				<uni-file-picker @select="handleSelect1" :mode="grid" :auto-upload="false" limit="1" title="最多选择1张图片"></uni-file-picker>
+				<button @click="uploadWeibo(tempFilePaths1)">上传微博</button>
 			</view>
 			<view class="uni-h6">是否参与微博上传<br>若参与，上传参与截图</view >
 		</view>
@@ -319,5 +320,20 @@
 
 	.close-btn:hover {
 		color: #FF4B4B;
+	}
+	.all{
+		background-image: url('/static/微信图片_20240929191641.jpg'); /* 设置背景图片 */
+		    background-size: cover; /* 背景图片覆盖整个容器 */
+		    background-position: center; /* 背景图片居中显示 */
+		    background-repeat: no-repeat; /* 背景图片不重复 */
+		    width: 100%; /* 背景容器宽度 */
+		    height: 100%; /* 背景容器高度 */
+		    position: absolute; /* 绝对定位 */
+		    top: 0;
+		    left: 0;
+		    /* z-index: -1;  确保背景在内容之下  */
+	}
+	button{
+		 z-index :10001;
 	}
 </style>
